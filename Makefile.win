@@ -1,0 +1,91 @@
+# Project: 订水管理系统
+# Makefile created by Dev-C++ 5.11
+
+CPP      = g++.exe -D__DEBUG__
+CC       = gcc.exe -D__DEBUG__
+WINDRES  = windres.exe
+OBJ      = 主函数.o 登录菜单.o 用户登录.o 文件批量存储函数.o 文件读取函数.o 查找指定信息函数.o 查询指定信息函数.o 用户注册.o 单个文件追加储存函数.o 文件选择函数.o 管理员登陆.o 结束运行函数.o 定义全局变量.o 管理员注册.o 添加商品函数.o 表头信息函数.o 修改用户信息函数.o 添加订单函数.o 复制信息函数.o 删除指定信息函数.o 增加信息函数.o 显示所有信息.o
+LINKOBJ  = 主函数.o 登录菜单.o 用户登录.o 文件批量存储函数.o 文件读取函数.o 查找指定信息函数.o 查询指定信息函数.o 用户注册.o 单个文件追加储存函数.o 文件选择函数.o 管理员登陆.o 结束运行函数.o 定义全局变量.o 管理员注册.o 添加商品函数.o 表头信息函数.o 修改用户信息函数.o 添加订单函数.o 复制信息函数.o 删除指定信息函数.o 增加信息函数.o 显示所有信息.o
+LIBS     = -L"C:/Program Files (x86)/Dev-Cpp/MinGW64/lib" -L"C:/Program Files (x86)/Dev-Cpp/MinGW64/x86_64-w64-mingw32/lib" -static-libgcc -g3
+INCS     = -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include"
+CXXINCS  = -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include/c++"
+BIN      = 订水管理系统.exe
+CXXFLAGS = $(CXXINCS) -g3
+CFLAGS   = $(INCS) -g3
+RM       = rm.exe -f
+
+.PHONY: all all-before all-after clean clean-custom
+
+all: all-before $(BIN) all-after
+
+clean: clean-custom
+	${RM} $(OBJ) $(BIN)
+
+$(BIN): $(OBJ)
+	$(CC) $(LINKOBJ) -o $(BIN) $(LIBS)
+
+主函数.o: 主函数.c
+	$(CC) -c 主函数.c -o 主函数.o $(CFLAGS)
+
+登录菜单.o: 登录菜单.c
+	$(CC) -c 登录菜单.c -o 登录菜单.o $(CFLAGS)
+
+用户登录.o: 用户登录.c
+	$(CC) -c 用户登录.c -o 用户登录.o $(CFLAGS)
+
+文件批量存储函数.o: 文件批量存储函数.c
+	$(CC) -c 文件批量存储函数.c -o 文件批量存储函数.o $(CFLAGS)
+
+文件读取函数.o: 文件读取函数.c
+	$(CC) -c 文件读取函数.c -o 文件读取函数.o $(CFLAGS)
+
+查找指定信息函数.o: 查找指定信息函数.c
+	$(CC) -c 查找指定信息函数.c -o 查找指定信息函数.o $(CFLAGS)
+
+查询指定信息函数.o: 查询指定信息函数.c
+	$(CC) -c 查询指定信息函数.c -o 查询指定信息函数.o $(CFLAGS)
+
+用户注册.o: 用户注册.c
+	$(CC) -c 用户注册.c -o 用户注册.o $(CFLAGS)
+
+单个文件追加储存函数.o: 单个文件追加储存函数.c
+	$(CC) -c 单个文件追加储存函数.c -o 单个文件追加储存函数.o $(CFLAGS)
+
+文件选择函数.o: 文件选择函数.c
+	$(CC) -c 文件选择函数.c -o 文件选择函数.o $(CFLAGS)
+
+管理员登陆.o: 管理员登陆.c
+	$(CC) -c 管理员登陆.c -o 管理员登陆.o $(CFLAGS)
+
+结束运行函数.o: 结束运行函数.c
+	$(CC) -c 结束运行函数.c -o 结束运行函数.o $(CFLAGS)
+
+定义全局变量.o: 定义全局变量.c
+	$(CC) -c 定义全局变量.c -o 定义全局变量.o $(CFLAGS)
+
+管理员注册.o: 管理员注册.c
+	$(CC) -c 管理员注册.c -o 管理员注册.o $(CFLAGS)
+
+添加商品函数.o: 添加商品函数.c
+	$(CC) -c 添加商品函数.c -o 添加商品函数.o $(CFLAGS)
+
+表头信息函数.o: 表头信息函数.c
+	$(CC) -c 表头信息函数.c -o 表头信息函数.o $(CFLAGS)
+
+修改用户信息函数.o: 修改用户信息函数.c
+	$(CC) -c 修改用户信息函数.c -o 修改用户信息函数.o $(CFLAGS)
+
+添加订单函数.o: 添加订单函数.c
+	$(CC) -c 添加订单函数.c -o 添加订单函数.o $(CFLAGS)
+
+复制信息函数.o: 复制信息函数.c
+	$(CC) -c 复制信息函数.c -o 复制信息函数.o $(CFLAGS)
+
+删除指定信息函数.o: 删除指定信息函数.c
+	$(CC) -c 删除指定信息函数.c -o 删除指定信息函数.o $(CFLAGS)
+
+增加信息函数.o: 增加信息函数.c
+	$(CC) -c 增加信息函数.c -o 增加信息函数.o $(CFLAGS)
+
+显示所有信息.o: 显示所有信息.c
+	$(CC) -c 显示所有信息.c -o 显示所有信息.o $(CFLAGS)

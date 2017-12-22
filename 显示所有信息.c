@@ -1,0 +1,74 @@
+#include"OW.h"
+//1为用户，2为商品，3为订单
+void display(int choice)//显示所有表内信息 
+{
+	int i,num;
+	if(choice==1) 
+	{
+		num=numUsers;
+		if(num==0)
+		{
+			printf("没有可供显示的记录！\n"); 
+		}
+		showTable(choice);
+		for(i=0;i<num;i++)
+		{
+			printf("%s\t%s\t%s",records[i].name,records[i].phone,records[i].address);
+		}
+		//打印满10个信息后暂停一下 
+		if(i%10==0&&i!=0)
+		{
+			printf("回车后继续...\n") ;
+			getchar();
+			getchar();
+			printf("\n\n");
+			showTable(choice);
+		}
+	}
+	if(choice==2) 
+	{
+		num=numWaters;
+		if(num==0)
+		{
+			printf("没有可供显示的记录！\n"); 
+		}
+		showTable(choice);
+		for(i=0;i<num;i++)
+		{
+			showTable(choice);
+			printf("%s\t%d",w_records[i].brand,w_records[i].price);
+		}
+		//打印满10个信息后暂停一下 
+		if(i%10==0&&i!=0)
+		{
+			printf("回车后继续...\n") ;
+			getchar();
+			getchar();
+			printf("\n\n");
+			showTable(choice);
+		}
+	}
+	if(choice==3) 
+	{
+		num=numOrders;
+		if(num==0)
+		{
+			printf("没有可供显示的记录！\n"); 
+		}
+		showTable(choice);
+		for(i=0;i<num;i++)
+		{
+			showTable(choice);
+			printf("%s\t%s\t%s\t%d\t%s",o_records[i].number,o_records[i].name,o_records[i].brand,o_records[i].amount,o_records[i].date);
+		}
+		//打印满10个信息后暂停一下 
+		if(i%10==0&&i!=0)
+		{
+			printf("回车后继续...\n") ;
+			getchar();
+			getchar();
+			printf("\n\n");
+			showTable(choice);
+		}
+	}
+}
